@@ -12,7 +12,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
-  assetPrefix: isGithubPages ? './' : '/',
+  assetPrefix: isGithubPages ? /techcorpasia.github.io/ : '/',
   trailingSlash: true,
   images: {
     unoptimized: true,
