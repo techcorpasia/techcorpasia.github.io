@@ -44,7 +44,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Build Next.js
-        run: npm run build
+        run: GITHUB_PAGES=true npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

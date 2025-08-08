@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
 const nextConfig = {
   experimental: {
     appDir: true,
@@ -11,7 +12,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'export',
-  assetPrefix: /techcorpasia.github.io/,
+  assetPrefix: isGithubPages ? '/techcorpasia.github.io/' : '/',
   trailingSlash: true,
   images: {
     unoptimized: true,
